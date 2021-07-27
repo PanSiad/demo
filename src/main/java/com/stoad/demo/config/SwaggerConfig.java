@@ -17,7 +17,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(
                         new ApiInfo("DemoAPI", "Api Documentation", "1.0", "",
-                                new Contact("", "", "xpanastasiad@ote.gr"), "Apache 2.0",
+                                new Contact("", "", "oteitwfm@ote.gr"), "Apache 2.0",
                                 "http://www.apache.org/licenses/LICENSE-2.0", new ArrayList<>()))
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.stoad.demo.controller"))

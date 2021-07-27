@@ -2,6 +2,8 @@ package com.stoad.demo.controller;
 
 import com.stoad.demo.domain.dto.ChoreDTO;
 import com.stoad.demo.service.ChoreService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -25,6 +27,7 @@ public class ChoreRestController {
     }
 
     @PostMapping("/add")
+    @ApiOperation("This API call is responsible for creating a new chore.")
     public ChoreDTO createChore(@RequestBody ChoreDTO choreDTO) {
         return choreService.save(choreDTO);
     }
